@@ -1,0 +1,92 @@
+/* ===== Black Wall Street — "The Places They Took" opening reel ===== */
+/* A sepia film intro that names erased Black districts, then dissolves into the site. */
+
+.intro{
+  position:fixed;inset:0;z-index:10000;background:#0b0a08;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  animation:introOut 1.6s ease forwards;
+  animation-delay:11s;            /* total runtime before it dissolves away */
+}
+.intro.done{display:none}
+
+/* warm sepia spotlight + slow drift (Ken-Burns) */
+.intro::before{
+  content:"";position:absolute;inset:-4%;
+  background:radial-gradient(120% 120% at 50% 42%,#2c2214 0%,#120d07 62%,#0b0a08 100%);
+  animation:introDrift 12s ease-out forwards;
+}
+@keyframes introDrift{from{transform:scale(1.08)}to{transform:scale(1)}}
+
+/* film grain + flicker */
+.intro::after{
+  content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:introFlick .18s steps(2) infinite;
+}
+@keyframes introFlick{0%{opacity:.12}100%{opacity:.2}}
+
+/* vintage vignette */
+.intro .vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 220px 60px rgba(0,0,0,.85)}
+
+/* the framed reel */
+.reel{
+  position:relative;width:min(900px,90vw);height:260px;text-align:center;
+  filter:sepia(.55) contrast(1.06) brightness(1.02);
+  border:1px solid rgba(200,160,74,.4);
+  box-shadow:inset 0 0 0 6px #0b0a08, inset 0 0 0 7px rgba(200,160,74,.25);
+}
+.reel .eyebrow-film{
+  position:absolute;top:18px;left:0;right:0;z-index:3;
+  font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:#9a7126;
+}
+.reel .eyebrow-film::before,.reel .eyebrow-film::after{content:"\25C6";margin:0 .8em;font-size:.7em;color:#b9892f;vertical-align:.1em}
+
+/* each named place */
+.frame{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  opacity:0;transform:translateY(16px) scale(1.03);
+  animation:frameCycle 1.7s ease forwards;
+}
+.frame .loc{font-family:'Cinzel',serif;font-size:clamp(1.7rem,4.4vw,3rem);color:#ecd9a8;letter-spacing:.05em;text-transform:uppercase;line-height:1.15}
+.frame .fate{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;color:#c39433}
+
+/* sequence: ~1.5s apart */
+.frame:nth-of-type(1){animation-delay:.4s}
+.frame:nth-of-type(2){animation-delay:1.9s}
+.frame:nth-of-type(3){animation-delay:3.4s}
+.frame:nth-of-type(4){animation-delay:4.9s}
+.frame:nth-of-type(5){animation-delay:6.4s}
+.frame:nth-of-type(6){animation-delay:7.9s}
+
+/* final card stays, then the whole intro dissolves */
+.frame.final{animation:frameHold 2.4s ease forwards;animation-delay:9s}
+.frame.final .loc{color:#fff;font-size:clamp(1.5rem,3.6vw,2.4rem)}
+.frame.final .fate{color:var(--gold,#c8a04a)}
+
+@keyframes frameCycle{
+  0%{opacity:0;transform:translateY(16px) scale(1.03)}
+  16%{opacity:1;transform:none}
+  84%{opacity:1;transform:none}
+  100%{opacity:0;transform:translateY(-12px) scale(.99)}
+}
+@keyframes frameHold{
+  0%{opacity:0;transform:translateY(16px) scale(1.03)}
+  22%{opacity:1;transform:none}
+  100%{opacity:1;transform:none}
+}
+@keyframes introOut{to{opacity:0;visibility:hidden}}
+
+/* skip */
+.intro .skip{
+  position:absolute;bottom:26px;right:28px;z-index:4;cursor:pointer;
+  background:transparent;border:1px solid rgba(200,160,74,.5);color:#c8a04a;
+  font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:.5rem 1.1rem;border-radius:40px;transition:.25s;
+}
+.intro .skip:hover{background:rgba(200,160,74,.12);color:#ecd9a8}
+
+@media(prefers-reduced-motion:reduce){
+  .intro{animation-delay:.3s;animation-duration:.4s}
+  .frame,.frame.final{animation:none;opacity:0}
+  .frame.final{opacity:1}
+}
