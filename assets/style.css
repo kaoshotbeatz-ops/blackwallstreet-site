@@ -9,12 +9,12 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+body{font-family:Arial, Helvetica, sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Times New Roman', Georgia, serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.eyebrow{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);display:inline-block}
+.eyebrow{font-family:'Times New Roman', Georgia, serif;font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);display:inline-block}
 .eyebrow::before{content:"\25C6";margin-right:.7em;font-size:.7em;vertical-align:.1em;color:var(--gold)}
 .sec-head.center .eyebrow::after{content:"\25C6";margin-left:.7em;font-size:.7em;vertical-align:.1em;color:var(--gold)}
 .eyebrow.light{color:var(--gold)}
@@ -31,7 +31,7 @@ img{max-width:100%;display:block}
 /* NAV */
 header{position:sticky;top:0;z-index:60;background:rgba(13,15,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-light);border-top:3px solid var(--gold);box-shadow:inset 0 5px 0 #0d0f14, inset 0 6px 0 var(--gold-deep)}
 nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:.7rem;color:#fff;font-family:'Cinzel',serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff;font-family:'Times New Roman', Georgia, serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
 .brand .mark{width:48px;height:48px;flex:none;color:transparent;font-size:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='6' fill='%230d0f14'/%3E%3Cg fill='none' stroke='%23c8a04a'%3E%3Cpath d='M50 7 L93 50 L50 93 L7 50 Z' stroke-width='2'/%3E%3Cpath d='M50 14 L86 50 L50 86 L14 50 Z' stroke-width='0.8' stroke='%23a9852f'/%3E%3C/g%3E%3Cg stroke='%23c8a04a' stroke-width='1.4'%3E%3Cline x1='50' y1='30' x2='50' y2='40'/%3E%3Cline x1='42' y1='32' x2='46' y2='41'/%3E%3Cline x1='58' y1='32' x2='54' y2='41'/%3E%3Cline x1='35' y1='37' x2='42' y2='43'/%3E%3Cline x1='65' y1='37' x2='58' y2='43'/%3E%3C/g%3E%3Cpath d='M33 70 h34' stroke='%23c8a04a' stroke-width='1.5'/%3E%3Ctext x='50' y='66' font-family='Georgia,Times,serif' font-size='34' font-weight='700' fill='%23c8a04a' text-anchor='middle'%3EBWS%3C/text%3E%3C/svg%3E") center/contain no-repeat}
 .navlinks{display:flex;gap:1.8rem;align-items:center}
 .navlinks a{color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;transition:.2s;position:relative}
@@ -59,7 +59,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 /* stats band */
 .scroll-stats{position:relative;z-index:2;border-top:1px solid var(--line-light);background:rgba(0,0,0,.25)}
 .scroll-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:34px 28px}
-.stat .n{font-family:'Fraunces';font-size:2.3rem;color:var(--gold);font-weight:600}
+.stat .n{font-family:'Times New Roman', Georgia, serif;font-size:2.3rem;color:var(--gold);font-weight:600}
 .stat .l{font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:.04em}
 
 /* SECTION */
@@ -80,8 +80,8 @@ section.tight{padding:72px 0}
 /* MISSION */
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .quote-card{background:var(--ink);color:#fff;border-radius:20px;padding:46px;position:relative;overflow:hidden}
-.quote-card::before{content:"\201C";position:absolute;top:-30px;right:24px;font-family:'Fraunces';font-size:11rem;color:rgba(200,160,74,.18)}
-.quote-card p{font-family:'Fraunces';font-size:1.5rem;line-height:1.4;position:relative;z-index:2}
+.quote-card::before{content:"\201C";position:absolute;top:-30px;right:24px;font-family:'Times New Roman', Georgia, serif;font-size:11rem;color:rgba(200,160,74,.18)}
+.quote-card p{font-family:'Times New Roman', Georgia, serif;font-size:1.5rem;line-height:1.4;position:relative;z-index:2}
 .quote-card .cite{margin-top:1.4rem;color:var(--gold);font-size:.9rem;letter-spacing:.04em}
 
 /* VALUES */
@@ -98,7 +98,7 @@ section.tight{padding:72px 0}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:38px 32px;transition:.3s}
 .alt .card{background:var(--paper)}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold)}
-.card .num{font-family:'Fraunces';color:var(--gold-deep);font-size:1.1rem;font-weight:600}
+.card .num{font-family:'Times New Roman', Georgia, serif;color:var(--gold-deep);font-size:1.1rem;font-weight:600}
 .card h3{font-size:1.4rem;margin:.7rem 0 .7rem}
 .card p{color:var(--muted);font-size:.97rem}
 .card ul{list-style:none;margin-top:1rem;font-size:.9rem}
@@ -109,13 +109,13 @@ section.tight{padding:72px 0}
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .feature .media{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(135deg,var(--ink-2),var(--ink));position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .feature .media span{position:absolute;inset:auto 0 0 0;padding:22px;color:rgba(255,255,255,.65);font-size:.85rem;letter-spacing:.06em}
-.feature .media .big{position:absolute;top:30px;left:30px;font-family:'Fraunces';font-size:3rem;color:var(--gold)}
+.feature .media .big{position:absolute;top:30px;left:30px;font-family:'Times New Roman', Georgia, serif;font-size:3rem;color:var(--gold)}
 .feature.rev .txt{order:2}
 
 /* process steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
 .step{position:relative;padding-top:26px}
-.step::before{counter-increment:s;content:"0" counter(s);position:absolute;top:-8px;left:0;font-family:'Fraunces';font-size:2.6rem;color:var(--gold-soft);font-weight:600}
+.step::before{counter-increment:s;content:"0" counter(s);position:absolute;top:-8px;left:0;font-family:'Times New Roman', Georgia, serif;font-size:2.6rem;color:var(--gold-soft);font-weight:600}
 .dark .step::before{color:rgba(200,160,74,.4)}
 .step h4{font-size:1.2rem;margin:.4rem 0;position:relative}
 .step p{color:var(--muted);font-size:.94rem}
@@ -127,7 +127,7 @@ section.tight{padding:72px 0}
 .tl-item:first-child{padding-left:0;border-left:0}
 .tl-item::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
 .tl-item:first-child::before{left:0}
-.tl-year{font-family:'Fraunces';font-size:1.6rem;color:var(--gold);font-weight:600;margin-bottom:.5rem}
+.tl-year{font-family:'Times New Roman', Georgia, serif;font-size:1.6rem;color:var(--gold);font-weight:600;margin-bottom:.5rem}
 .tl-item h4{font-size:1.3rem;color:#fff;margin-bottom:.6rem}
 .tl-item p{color:rgba(255,255,255,.68);font-size:.98rem}
 .tl-item em{color:var(--gold-soft);font-style:italic}
@@ -137,7 +137,7 @@ section.tight{padding:72px 0}
 .member{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s}
 .member:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
 .member .av{height:120px;background:linear-gradient(135deg,var(--ink-2),var(--ink));position:relative}
-.member .av .init{position:absolute;left:28px;bottom:-26px;width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:'Fraunces';font-weight:700;font-size:1.4rem;border:4px solid var(--paper)}
+.member .av .init{position:absolute;left:28px;bottom:-26px;width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:'Times New Roman', Georgia, serif;font-weight:700;font-size:1.4rem;border:4px solid var(--paper)}
 .member .body{padding:38px 28px 28px}
 .member h4{font-size:1.2rem;margin-bottom:.2rem}
 .member .role{color:var(--gold-deep);font-size:.82rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin-bottom:.7rem}
@@ -168,15 +168,15 @@ form button{margin-top:22px;width:100%;justify-content:center}
 /* FAQ */
 .faq{max-width:780px;margin:0 auto}
 .faq details{border-bottom:1px solid var(--line);padding:20px 0}
-.faq summary{font-family:'Fraunces';font-size:1.2rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary{font-family:'Times New Roman', Georgia, serif;font-size:1.2rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--gold-deep);font-size:1.5rem;font-family:'Inter'}
+.faq summary::after{content:"+";color:var(--gold-deep);font-size:1.5rem;font-family:Arial, sans-serif}
 .faq details[open] summary::after{content:"\2013"}
 .faq p{color:var(--muted);margin-top:.8rem}
 
 /* logo strip */
 .partners{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;align-items:center;opacity:.8}
-.partners span{font-family:'Fraunces';font-size:1.3rem;color:var(--muted)}
+.partners span{font-family:'Times New Roman', Georgia, serif;font-size:1.3rem;color:var(--muted)}
 
 /* ===== ART DECO · 1921 LAYER ===== */
 /* aged-paper grain on light sections */
@@ -248,7 +248,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
 .statement .wrap::before,.statement .wrap::after{content:"";display:block;width:120px;height:0;margin:0 auto;border-top:1px solid var(--gold);position:relative}
 .statement .wrap::before{margin-bottom:30px;box-shadow:0 5px 0 -2px var(--gold)}
 .statement .wrap::after{margin-top:30px;box-shadow:0 -5px 0 -2px var(--gold)}
-.statement h2{font-family:'Cinzel',serif;font-size:clamp(1.7rem,4.4vw,2.9rem);line-height:1.3;color:#fff;letter-spacing:.02em;text-transform:uppercase}
+.statement h2{font-family:'Times New Roman', Georgia, serif;font-size:clamp(1.7rem,4.4vw,2.9rem);line-height:1.3;color:#fff;letter-spacing:.02em;text-transform:uppercase}
 .statement h2 em{font-style:normal;color:var(--gold)}
 .statement p{color:rgba(255,255,255,.78);margin-top:1.4rem;font-size:1.15rem}
 
