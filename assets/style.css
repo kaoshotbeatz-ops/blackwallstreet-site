@@ -1,9 +1,8 @@
 /* ===== Black Wall Street LLC — Design System ===== */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@700&display=swap');
 :root{
   --ink:#0d0f14; --ink-soft:#1a1d26; --ink-2:#202637;
   --paper:#faf7f1; --paper-2:#f3ede2; --paper-3:#ece3d3;
-  --gold:#c8a04a; --gold-deep:#a9852f; --gold-soft:#e9d8ad;
+  --gold:#c8a04a; --gold-deep:#7a5b14; --gold-soft:#e9d8ad;
   --line:rgba(13,15,20,.12); --line-light:rgba(255,255,255,.1);
   --muted:#5a5f6b; --maxw:1180px;
   --shadow:0 24px 60px -28px rgba(13,15,20,.45);
@@ -329,3 +328,20 @@ footer a:hover{color:var(--gold)}
   .split .photo-col{min-height:300px}
 }
 @media(max-width:560px){.scroll-stats .wrap,.grid2,.fgrid{grid-template-columns:1fr}}
+
+/* ===== ACCESSIBILITY + PRIVACY ===== */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.pcard:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10001;background:var(--ink);color:#fff;padding:12px 18px;border-radius:0 0 10px 0;font-weight:600}
+.skip-link:focus{left:0}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+/* privacy notice */
+.consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9000;max-width:740px;margin:0 auto;background:var(--ink);color:rgba(255,255,255,.86);border:1px solid var(--gold-deep);border-radius:14px;padding:15px 20px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:var(--shadow);font-size:.85rem}
+.consent a{color:var(--gold);text-decoration:underline}
+.consent .ok{cursor:pointer;border:0;background:var(--gold);color:var(--ink);font-weight:600;font-size:.82rem;padding:.55rem 1.3rem;border-radius:40px;flex:none}
+/* click-to-load map facade */
+.map-facade{position:relative;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,var(--ink-2),var(--ink));color:#fff;text-align:center;cursor:pointer;border:0;width:100%;border-radius:18px}
+.map-facade .mf-btn{background:var(--gold);color:var(--ink);font-weight:600;padding:.7rem 1.3rem;border-radius:40px;margin-bottom:4px}
+.map-facade small{color:rgba(255,255,255,.6);font-size:.78rem;max-width:360px;padding:0 16px}

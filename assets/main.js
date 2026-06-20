@@ -40,4 +40,51 @@
       b.style.background = '#2f7d4f'; b.style.color = '#fff';
     });
   });
+
+  // ===== accessibility =====
+  // skip-to-content link
+  var main = document.querySelector('section') ;
+  if(main && !document.querySelector('.skip-link')){
+    if(!main.id) main.id = 'main';
+    var sk = document.createElement('a');
+    sk.className='skip-link'; sk.href='#'+main.id; sk.textContent='Skip to content';
+    document.body.insertBefore(sk, document.body.firstChild);
+  }
+  // hamburger ARIA
+  if(toggle){
+    toggle.setAttribute('aria-label','Toggle navigation menu');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-controls','nav');
+    toggle.addEventListener('click', function(){
+      toggle.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true':'false');
+    });
+  }
+
+  // ===== privacy notice (one-time) =====
+  try{
+    if(!localStorage.getItem('bws_privacy_ack')){
+      var c = document.createElement('div');
+      c.className='consent';
+      c.setAttribute('role','region'); c.setAttribute('aria-label','Privacy notice');
+      c.innerHTML = '<span>We respect your privacy. This site loads <strong>no third-party trackers or cookies</strong> by default — the map loads only when you click it. <a href="privacy-policy.html">Privacy&nbsp;Policy</a>.</span><button class="ok" type="button">Got it</button>';
+      document.body.appendChild(c);
+      c.querySelector('.ok').addEventListener('click', function(){
+        try{ localStorage.setItem('bws_privacy_ack','1'); }catch(e){}
+        c.remove();
+      });
+    }
+  }catch(e){}
+
+  // ===== click-to-load map (no Google request until user opts in) =====
+  document.querySelectorAll('.map-facade').forEach(function(fa){
+    fa.addEventListener('click', function(){
+      var src = fa.getAttribute('data-map');
+      if(!src) return;
+      var ifr = document.createElement('iframe');
+      ifr.title='Black Wall Street LLC location'; ifr.width='100%'; ifr.height='380';
+      ifr.style.border='0'; ifr.style.display='block'; ifr.loading='lazy';
+      ifr.referrerPolicy='no-referrer-when-downgrade'; ifr.src=src;
+      fa.replaceWith(ifr);
+    });
+  });
 })();
