@@ -298,6 +298,9 @@ footer a:hover{color:var(--gold)}
 .legal .eho svg{flex:none;width:36px;height:36px;color:rgba(255,255,255,.85)}
 .legal .eho strong{color:#fff}
 .legal .disclaimer{color:rgba(255,255,255,.5);font-size:.73rem;line-height:1.6}
+/* conspicuous inline investor disclaimer */
+.invest-note{margin-top:34px;background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;font-size:.85rem;line-height:1.6;color:var(--muted)}
+.invest-note strong{color:var(--ink)}
 .fbot .flegal a{color:rgba(255,255,255,.5)}
 .fbot .flegal a:hover{color:var(--gold)}
 .socials{display:flex;gap:.7rem;margin-top:1.2rem}
