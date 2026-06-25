@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/jn0hncmgk3io/public_html/new.blackwallstreetllc.org/
+    - /bin/mkdir -p ${DEPLOYPATH}assets
+    - /bin/cp -f *.html ${DEPLOYPATH}
+    - /bin/cp -f assets/style.css assets/main.js ${DEPLOYPATH}assets/
