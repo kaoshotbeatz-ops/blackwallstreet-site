@@ -297,6 +297,17 @@ footer a:hover{color:var(--gold)}
 .legal .eho svg{flex:none;width:36px;height:36px;color:rgba(255,255,255,.85)}
 .legal .eho strong{color:#fff}
 .legal .disclaimer{color:rgba(255,255,255,.5);font-size:.73rem;line-height:1.6}
+/* property detail page */
+.pd-specs{display:flex;flex-wrap:wrap;gap:14px;margin:.4rem 0 0}
+.pd-specs .s{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:14px 22px;min-width:120px}
+.pd-specs .s b{display:block;font-family:'Times New Roman',Georgia,serif;font-size:1.5rem;color:var(--ink);line-height:1.1}
+.pd-specs .s span{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-deep);font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery .g{display:block;aspect-ratio:4/3;background-size:cover;background-position:center;border-radius:12px;transition:.35s;border:1px solid var(--line)}
+.gallery .g:hover{transform:scale(1.02);filter:saturate(1.06)}
+.gallery .wide{grid-column:span 2;aspect-ratio:16/9}
+@media(max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery .wide{grid-column:span 2}}
+
 /* property portfolio cards */
 .props{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .prop{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
