@@ -297,6 +297,23 @@ footer a:hover{color:var(--gold)}
 .legal .eho svg{flex:none;width:36px;height:36px;color:rgba(255,255,255,.85)}
 .legal .eho strong{color:#fff}
 .legal .disclaimer{color:rgba(255,255,255,.5);font-size:.73rem;line-height:1.6}
+/* property portfolio cards */
+.props{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.prop{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.prop:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.prop .ph{height:210px;background-size:cover;background-position:center}
+.prop .pb{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+.prop h3{font-size:1.3rem;margin:0 0 .25rem}
+.prop .specs{font-size:.82rem;color:var(--gold-deep);font-weight:600;letter-spacing:.03em;margin-bottom:.7rem}
+.prop p{color:var(--muted);font-size:.94rem;margin-bottom:.9rem}
+.prop .val{margin-top:auto;display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
+.prop .val div{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.prop .val b{display:block;font-family:'Times New Roman',Georgia,serif;font-size:1.1rem;color:var(--ink);letter-spacing:0}
+.prop .status{font-size:.82rem;color:var(--ink);margin-top:.7rem}
+.prop .status .dot{color:#2f7d4f;font-weight:700}
+.prop .status.dev .dot{color:var(--gold-deep)}
+@media(max-width:900px){.props{grid-template-columns:1fr}}
+
 /* conspicuous inline investor disclaimer */
 .invest-note{margin-top:34px;background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;font-size:.85rem;line-height:1.6;color:var(--muted)}
 .invest-note strong{color:var(--ink)}
