@@ -40,6 +40,19 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .navlinks .btn{padding:.6rem 1.2rem;color:var(--ink)}
 .navlinks .btn:hover{color:#fff}
 .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+/* nav dropdown */
+.nav-dd{position:relative;display:inline-block}
+.nav-dd>a::after{content:" ▾";font-size:.75em;opacity:.7}
+.nav-menu{position:absolute;top:100%;left:0;margin-top:10px;background:var(--ink);border:1px solid var(--line-light);border-radius:12px;padding:8px 0;min-width:250px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s;z-index:70}
+.nav-dd:hover .nav-menu,.nav-dd:focus-within .nav-menu{opacity:1;visibility:visible;transform:none}
+.nav-menu a{display:block;padding:.5rem 18px;font-size:.85rem;color:rgba(255,255,255,.82);font-weight:500;white-space:nowrap}
+.nav-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-menu .dd-div{height:1px;background:var(--line-light);margin:6px 0}
+@media(max-width:900px){
+  .nav-dd{display:block;width:100%}
+  .nav-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:0;box-shadow:none;margin:.1rem 0 .3rem;padding:.2rem 0 .2rem 14px;min-width:0}
+  .nav-menu a{padding:.38rem 0;font-size:.82rem}
+}
 
 /* HERO (page banner) */
 .hero{position:relative;background:radial-gradient(120% 120% at 80% 0%,var(--ink-2) 0%,var(--ink) 55%);color:#fff;overflow:hidden}
