@@ -50,8 +50,8 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .nav-menu .dd-div{height:1px;background:var(--line-light);margin:6px 0}
 @media(max-width:900px){
   .nav-dd{display:block;width:100%}
-  .nav-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:0;box-shadow:none;margin:.1rem 0 .3rem;padding:.2rem 0 .2rem 14px;min-width:0}
-  .nav-menu a{padding:.38rem 0;font-size:.82rem}
+  .nav-menu{display:none}
+  .nav-dd>a::after{content:""}
 }
 
 /* HERO (page banner) */
