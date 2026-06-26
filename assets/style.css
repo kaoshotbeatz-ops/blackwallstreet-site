@@ -48,6 +48,8 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .nav-menu a{display:block;padding:.5rem 18px;font-size:.85rem;color:rgba(255,255,255,.82);font-weight:500;white-space:nowrap}
 .nav-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
 .nav-menu .dd-div{height:1px;background:var(--line-light);margin:6px 0}
+.nav-menu .dd-head{color:var(--gold);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-menu .dd-head:hover{background:rgba(200,160,74,.12);color:var(--gold)}
 @media(max-width:900px){
   .nav-dd{display:block;width:100%}
   .nav-menu{display:none}
