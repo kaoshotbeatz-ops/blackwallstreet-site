@@ -1,0 +1,8 @@
+# Black Wall Street — always serve fresh HTML/CSS/JS (no stale cached pages)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
