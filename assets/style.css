@@ -52,7 +52,8 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .nav-menu .dd-head:hover{background:rgba(200,160,74,.12);color:var(--gold)}
 @media(max-width:900px){
   .nav-dd{display:block;width:100%}
-  .nav-menu{display:none}
+  .nav-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:0;box-shadow:none;margin:.1rem 0 .3rem;padding:.2rem 0 .2rem 14px;min-width:0}
+  .nav-menu .dd-item{display:none}
   .nav-dd>a::after{content:""}
 }
 
