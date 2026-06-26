@@ -290,7 +290,11 @@ footer h5{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:upperca
 footer a{color:rgba(255,255,255,.7);font-size:.92rem;display:block;padding:.3rem 0;transition:.2s}
 footer a:hover{color:var(--gold)}
 .fbrand p{margin-top:1rem;max-width:320px;font-size:.95rem}
-.fbot{display:flex;justify-content:space-between;padding-top:24px;font-size:.82rem;color:rgba(255,255,255,.5);flex-wrap:wrap;gap:10px}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-size:.82rem;color:rgba(255,255,255,.5);flex-wrap:wrap;gap:8px 18px}
+.fbot .flegal{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .6rem;justify-content:center}
+.fbot .flegal a{display:inline-block;padding:0;color:rgba(255,255,255,.7)}
+.fbot .flegal a:hover{color:var(--gold)}
+@media(max-width:700px){.fbot{justify-content:center;text-align:center}.fbot .flegal{order:3}}
 /* compliance / legal */
 .legal{border-top:1px solid var(--line-light);margin-top:30px;padding-top:22px;display:flex;flex-direction:column;gap:14px}
 .legal .eho{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.74);font-size:.82rem;line-height:1.55}
